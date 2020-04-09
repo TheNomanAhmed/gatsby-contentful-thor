@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
 :root {
   --background: #1d1d1d;
   --border: #313131;
-  --primary: #ffc400;
+  --primary: #fdd365;
   --inActive: #505050;
   --menuItem: 1.125rem;
   --transition: 0.3s;
