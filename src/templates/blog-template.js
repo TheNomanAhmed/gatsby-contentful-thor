@@ -53,6 +53,9 @@ const RichText = styled.article`
   h3 {
     background-color: red;
   }
+  h4 {
+    color: green;
+  }
 
   .main-image {
     border-bottom: 3px solid var(--primary);
