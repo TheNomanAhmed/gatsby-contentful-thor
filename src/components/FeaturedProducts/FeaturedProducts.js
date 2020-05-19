@@ -7,9 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const getProducts = graphql`
   query {
-    featuredProducts: allContentfulProducts(
-      filter: { featured: { eq: true } }
-    ) {
+    featuredProducts: allContentfulProducts {
       edges {
         node {
           name

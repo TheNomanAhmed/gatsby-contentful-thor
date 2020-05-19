@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const getImage = graphql`
   query {
-    file(relativePath: { eq: "yellow-metal-design-decoration.jpg" }) {
+    file(relativePath: { eq: "bark.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -53,11 +53,9 @@ const Product = ({ product }) => {
   const img = data.file.childImageSharp.fluid
   const { name, price, slug, images } = product
 
-  let mainImage = images ? images[0].fluid : img
-
   return (
     <ProductItem>
-      <Image fluid={mainImage} alt="single Product">
+      <Image fluid={img} alt="single Product">
         <ProductImg />
       </Image>
       <ProductContent>

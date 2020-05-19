@@ -46,6 +46,25 @@ const ContentArea = styled.div`
   }
 `
 
+const RichText = styled.article`
+  h1 {
+    background-color: blue;
+  }
+  h3 {
+    background-color: red;
+  }
+
+  .main-image {
+    border-bottom: 3px solid var(--primary);
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+`
+
 const Blog = ({ data }) => {
   const {
     title,
@@ -91,7 +110,7 @@ const Blog = ({ data }) => {
               fluid={images[0].fluid}
               alt="Placeholder"
             />
-            <article>{documentToReactComponents(json, options)}</article>
+            <RichText>{documentToReactComponents(json, options)}</RichText>
           </ContentArea>
         </Grid>
       </section>
