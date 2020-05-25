@@ -16,7 +16,7 @@ const NavBar = styled.nav`
 
 const NavButton = styled.button`
   position: relative;
-  color: #fff;
+  color: #1d1d1d;
   padding: 12px 0 17px 0;
   order: 1;
   border: none;
@@ -58,7 +58,8 @@ const NavLogo = styled.div`
   }
 
   a {
-    color: #fff;
+    font-size: 2rem;
+    color: #1d1d1d;
     text-decoration: none;
     transition: color 0.3s;
 
@@ -103,7 +104,7 @@ const NavSocials = styled.div`
     list-style: none;
 
     a {
-      color: #fff;
+      color: #1d1d1d;
       transition: var(--transition);
 
       &:hover {
@@ -211,7 +212,7 @@ const NavLinks = styled.div`
   }
 
   a {
-    color: #fff;
+    color: #1d1d1d;
     text-decoration: none;
     padding: 0;
     transition: var(--transition) color;

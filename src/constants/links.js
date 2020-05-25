@@ -1,7 +1,7 @@
 export default [
   {
-    path: "/products",
-    text: "products",
+    path: "/apartments",
+    text: "apartments",
   },
   // {
   //   path: "/blog",

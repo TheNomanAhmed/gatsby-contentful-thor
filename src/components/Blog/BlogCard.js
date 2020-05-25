@@ -9,7 +9,7 @@ const BlogItem = styled.article`
 `
 
 const BlogItemContent = styled.div`
-  background-color: #272727;
+  background-color: #d7fffd;
   border-top: 3px solid var(--primary);
   padding: 2.5rem 1.25rem;
 

@@ -71,7 +71,7 @@ const FooterMenu = styled.div`
   }
 
   a {
-    color: #fff;
+    color: #1d1d1d;
     text-decoration: none;
     padding: 0;
     transition: var(--transition) color;

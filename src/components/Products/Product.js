@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const getImage = graphql`
   query {
-    file(relativePath: { eq: "bark.jpg" }) {
+    file(relativePath: { eq: "apa1.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -23,7 +23,7 @@ const ProductItem = styled.article`
 `
 
 const ProductContent = styled.div`
-  background-color: #272727;
+  background-color: #ecfbfc;
   border-top: 3px solid var(--primary);
   padding: 2.5rem 1.25rem;
 
@@ -52,6 +52,7 @@ const Product = ({ product }) => {
   const data = useStaticQuery(getImage)
   const img = data.file.childImageSharp.fluid
   const { name, price, slug, images } = product
+  console.log(images)
 
   return (
     <ProductItem>
@@ -61,7 +62,7 @@ const Product = ({ product }) => {
       <ProductContent>
         <h2>{name || "Name not listed"}</h2>
         <h3>£ {price || "Call"}</h3>
-        <AniLink className="btn" cover bg="#1d1d1d" to={`/products/${slug}`}>
+        <AniLink className="btn" cover bg="#1d1d1d" to={`/apartments/${slug}`}>
           View Product
         </AniLink>
       </ProductContent>

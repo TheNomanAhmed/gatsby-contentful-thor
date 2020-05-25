@@ -8,12 +8,12 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: "Barcadia",
-    description: "A super-fast site using GatsbyJS",
-    author: "Morgan Baker",
-    twitterUsername: "@dave",
-    image: "/yellow-metal-design-decoration.jpg",
-    siteUrl: "https://barcadia.netlify.com",
+    title: "Blok",
+    description: "The Modern Real Estate Agency",
+    author: "Noman Khan",
+    twitterUsername: "@thenomanahmed",
+    image: "/header.jpg",
+    siteUrl: "https://blok.ai/en/",
   },
   /* Your site config here */
   plugins: [

@@ -6,9 +6,9 @@ import "typeface-heebo"
 
 const GlobalStyle = createGlobalStyle`
 :root {
-  --background: #1d1d1d;
+  --background: #fff;
   --border: #313131;
-  --primary: #ffc400;
+  --primary: #00909e;
   --inActive: #505050;
   --menuItem: 1.125rem;
   --transition: 0.3s;
@@ -38,12 +38,12 @@ const GlobalStyle = createGlobalStyle`
 
 }  
 body {
-    font-family: 'Heebo', sans-serif;
+    font-family: 'roboto', sans-serif;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--background);
-    color: #fff;
+    color: #1d1d1d;
   }
 
 h1,
@@ -69,17 +69,18 @@ h2 {
 
 a.btn,
 button.btn {
-    color: #fff;
+    color: #1d1d1d;
     background-color: transparent;
-    font-family: 'Heebo', sans-serif;
+    font-family: 'roboto', sans-serif;
     border: 0;
     text-decoration: none;
     padding: 0;
     transition: var(--transition) color;
     text-transform: capitalize;
     font-size: var(--menuItem);
-    font-weight: 900;
-    letter-spacing: -0.5px;
+    font-weight: 800;
+    line-height: 1.625;
+    letter-spacing: 0.5px;
     position: relative;
     padding-bottom: 10px;
     align-self: flex-start;
@@ -110,7 +111,17 @@ button.btn {
 
   @media (hover: hover) {
     a:hover {
-      color: var(--primary);
+      /* color: var(--primary); */
+      ::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 16px;
+        left: 0;
+        right: 0;
+        bottom: 16px;
+        background-color: var(--primary);
+    }
     }
   }
 

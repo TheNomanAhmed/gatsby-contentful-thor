@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const getImages = graphql`
   query HeroImage {
-    fluid: file(relativePath: { eq: "yellow-metal-design-decoration.jpg" }) {
+    fluid: file(relativePath: { eq: "header.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -59,12 +59,31 @@ const TitleArea = styled.div`
   }
 `
 const ContentArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  .contact-details {
+    display: flex;
+    flex-direction: row;
+
+    h3 {
+      padding-left: 1rem;
+      font-size: 1.5rem;
+    }
+
+    img {
+      width: 35px;
+    }
+  }
+  ul {
+    /* color: yellow; */
+  }
   @media (min-width: 768px) {
-    grid-column: 3 / 4;
+    grid-column: 2 / 4;
   }
 
   @media (min-width: 1200px) {
-    grid-row: 2 / 3;
+    grid-column: 3 / 4;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -83,7 +102,7 @@ const HeroSubTitle = styled.h2`
   margin-bottom: 2.125rem;
 `
 
-const Banner = ({ title, info, children }) => {
+const Banner = ({ title, info }) => {
   const data = useStaticQuery(getImages)
   return (
     <section className="section-padding">
@@ -94,10 +113,23 @@ const Banner = ({ title, info, children }) => {
           </HeroImage>
           <TitleArea>
             <HeroTitle>{title}</HeroTitle>
+            <HeroSubTitle>{info}</HeroSubTitle>
           </TitleArea>
           <ContentArea>
-            <HeroSubTitle>{info}</HeroSubTitle>
-            {children}
+            <ul>
+              <li>Professional real estate brokers </li>
+              <li>Award-winning service </li>
+              <li>Save on average 6000€</li>
+              <li>No sale, no fee</li>
+            </ul>
+            <div className="contact-details">
+              <img
+                src="https://blok-website.s3.eu-central-1.amazonaws.com:443/images/icons/hotline.svg"
+                alt="Call us"
+              />
+              <h3>044 241 6380</h3>
+            </div>
+            <p> Leave a callback request to our real estate specialist</p>
           </ContentArea>
         </GridContainer>
       </HeroContainer>

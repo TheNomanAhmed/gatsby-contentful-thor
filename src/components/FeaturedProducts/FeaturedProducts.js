@@ -79,7 +79,7 @@ const FeaturedProducts = props => {
             Aenean pulvinar ligula id elit pulvinar, sit amet semper sem semper.
             In porttitor ornare libero, eu faucibus tellus elementum sit amet.
           </p>
-          <Button text="All Products" link="/products" />
+          <Button text="All Apartments" link="/Apartments" />
         </TitleArea>
         <FlexContainer>
           {products.map(({ node }) => {
